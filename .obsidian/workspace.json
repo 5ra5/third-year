@@ -4,33 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "5d1da8e692ff8cd5",
+        "id": "70201aafe6b1fd15",
         "type": "tabs",
         "children": [
           {
-            "id": "bc34b925cdb9897d",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "semester5/networks2/lecture-notes/Numeral Systems.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Numeral Systems"
-            }
-          },
-          {
-            "id": "bcbaba02fbb4cf89",
+            "id": "878238d01a906f2c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "semester5/networks2/notes/1 numbering systems.md",
+                "file": "semester5/oo-analysis-and-design/notes/1 introduction.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1 numbering systems"
+              "title": "1 introduction"
             }
           }
         ]
@@ -200,15 +188,22 @@
       "bases:Create new base": false
     }
   },
-  "active": "bc34b925cdb9897d",
+  "active": "878238d01a906f2c",
   "lastOpenFiles": [
-    "semester5/networks2/notes/1 numbering systems.md",
-    "semester5/networks2/lecture-notes/Numeral Systems.pdf",
-    "semester5/networks2/notes/1 crash course.md",
-    "semester5/networks2/lecture-notes/CSC1010 - Crash Course.pdf",
+    "semester5/advanced-algorithms-and-AI-search/Untitled.md",
+    "semester5/advanced-algorithms-and-AI-search/notes",
+    "semester5/oo-analysis-and-design/notes/1 introduction.md",
+    "semester5/advanced-algorithms-and-AI-search",
     "semester5/networks2/notes/1 intro.md",
+    "semester5/oo-analysis-and-design/lectures/1 Introduction.pdf",
+    "semester5/oo-analysis-and-design/lectures/1 Overall Project Description.pdf",
+    "semester5/oo-analysis-and-design/lectures",
+    "semester5/oo-analysis-and-design/notes",
+    "semester5/networks2/lectures/1 Numeral Systems.pdf",
+    "semester5/networks2/notes/1 numbering systems.md",
+    "semester5/networks2/notes/1 crash course.md",
+    "semester5/networks2/lectures/1 Crash Course.pdf",
     "semester5/networks2/notes",
-    "semester5/networks2/lecture-notes",
-    "semester5/networks2"
+    "semester5/networks2/lectures"
   ]
 }

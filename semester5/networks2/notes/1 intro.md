@@ -1,5 +1,6 @@
 labs - 25% of the final mark
 exam - 75% of the final mark
+lectures start at 9:30
 
 -  labs start on week 5 on wednesdays, 6 labs that need to be submitted
 -  first one is tutorial, the rest need to be submitted

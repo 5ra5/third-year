@@ -29,3 +29,18 @@ big project UI design rationale & evaluation (week 11) - 20%
 -  user interface design = UI design
 -  user experience = UX
 -  human-computer interaction = CHI or HCI or interaction design
+
+## interaction design
+
+-  reliable technology (accuracy, robustness...) - **today's needs**
+-  source of lots of new possibilities - **future needs**
+-  **discovering/creating new needs!**
+
+-  need to know: design principles, usability guidelines, heuristics, design 'tips'..., **design experience**
+
+## textbooks
+
+-  Designing the User Interface: Strategies for Effective Human-Computer Interaction (6th Ed.), Ben Shneiderman, et al., 2016; Addison-Wesley
+-  Designing Interactive Systems: A Comprehensive Guide to HCI, UX and Interaction Design (3rd Ed.) David Benyon, 2010; Addison-Wesley
+-  Usability Engineering, Jakob Nielsen, 1993; Morgan-Kaufmann
+-  The Design of Everyday Things, Don Norman, 2013; Basic Books

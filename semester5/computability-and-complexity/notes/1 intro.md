@@ -23,7 +23,7 @@ supplementary text:
 
 
 25% CA: 
-first assignment (10%) - programming in Pascal, week 7 or 8
+first assignment - lab exam (10%) - programming in Pascal or Haskell, week 7 or 8
 second assignment (15%) - haskell program
 
 75% final exam: 

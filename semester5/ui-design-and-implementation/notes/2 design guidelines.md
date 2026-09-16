@@ -1,6 +1,7 @@
 -  9 design guidelines
 ## what makes a good UI
 
+## guideline 1
 ### user classification
 
 half truth = a good UI is the one that is appropriate for it's target audience
@@ -25,3 +26,21 @@ some design is not about preference: readers read faster dark text on light back
 -  be careful about the contrast between text and background colour
 -  use quiet background
 -  sharpen/prioritise the information
+
+## human vs computer
+
+| Humans do better                                                                                                      | Computers do better                                                          |
+| --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| improvise (computer cannot work without instructions)                                                                 | calculate accurately                                                         |
+| relationship                                                                                                          | deductive reasoning (connecting facts into conclusions) eg. A->B, B->C, A->C |
+| relevance and big picture, relating                                                                                   | memory/storage                                                               |
+| inductive reasoning (deriving general conclusion after looking at some examples - does not guarantee objective truth) | repetitive tasks (making less errors)                                        |
+| creativity                                                                                                            | vigilance                                                                    |
+| coping with unexpected situation                                                                                      | endurance (consistent performance without rest, as long as they have power)  |
+## guideline 2
+
+-  do not design the frontend of your UI to show people that you only have a few functions in your software
+-  make sure to fill up the page, don't have only a few points
+-  but make sure that you do not overwhelm the user
+-  prioritise most commonly used features and the most important information
+-  the function of the feature affects the design eg. volume up and down should have an arrow going up and an arrow going down

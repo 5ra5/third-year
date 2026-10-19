@@ -13,3 +13,8 @@ https://scholar.google.com/citations?user=WYmChp0AAAAJ&hl=en
 
 50% CA - group project (5 or 6 people)
 50% final exam
+
+**FINAL EXAM**
+one or two open questions in the exam
+most of questions will be true/false, labelling and multiple choice
+LOOP BASED EXAM IN LABS

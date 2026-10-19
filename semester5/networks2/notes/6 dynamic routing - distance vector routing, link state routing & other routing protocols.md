@@ -100,3 +100,77 @@ special echo packets = something like ping
  -  we build them periodically (say every few minutes) or after a change in topology (eg. a link or routing goes down)
  -  using flooding for distribution of LSA - sequence number is ignored by other routers until it is changed, when a router receives an updated sequence number, it passes it to other routers
  -  flooding helps all routers to build a link based database so that routers can use Djikstras algorithm to find the shortest path
+
+## open shortest path first (OSFP)
+
+-  interior gateway protocol = used in order to compute routes in the same autonomous systems
+-  widely used
+-  layer 3 protocol in OSI model, network protocol
+-  main difference with RIP: RIP has a main protocol where routers are sending their routing tables in an interval, in OSFP once we build routing tables there is no need to share them constantly with other routers unless there is change in topology (eg. router or link fails, there is a change)
+
+### area concept
+-  dividing autonomous systems into multiple areas - making sure we can accelerate the process of computing the shortest path to other routers
+-  key for OSFP - you need to have backbone area or area 0 (this is main important one)
+-  routers don't need to keep track of the entire topology, just of their area
+-  ASBR - autonomous system border routers connect AS to the internet
+-  every router in area 0 is directly connected to every other router in that area - this is a mandatory requirement
+-  this is not mandatory in other areas
+-  communication between different areas has to go through area 0 (for example area 1 and area 2 can't be directly connected, just through area 0)
+
+### route types
+
+-  intra-area = within the same area
+-  full inter-area = between different areas (route that connects two different areas)
+-  external = routes to the internet or to any other autonomous system
+
+### area types
+
+-  **stub** = area without access to the internet (ASBR)
+-  any external routing info that would be forwarded to a stub is not advertised within the stub, there is a default route
+-  if there is an external destination that routers in a stub need to forward packets to - you need to send them to another router in area 0, which are then able to forward packets to ASBR router that has a connection to the internet
+
+-  **totally stubby** - neither external info nor routing info from other areas are advertised
+
+-  **not-so-stubby** = stub area that contains ASBR (direct access to the internet)
+-  advertising routing info to other areas, but not external routing info learned by routers from outside the area
+
+designated router = routers send and receive routing info to and from the designated router only (routers in every area vote to make one designated router)
+-  backup designated routers is selected in case original DR fails = network doesn't stop
+
+# other routing protocols
+
+## enhanced interior gateway routing protocol (EIGRP)
+
+-  network layer (layer 3) protocol created by CISCO
+-  required licence before, now it's open standard (it can be used without licence)
+-  combines both distance vector and link state approach = hybrid interior gateway protocol
+-  builds neighbour and topology tables and sends routing updates only when topology change occurs
+-  sends hello messages to maintain router neighbour relationship
+-  uses multicast
+-  default metric = bandwidth + delay
+-  selects the route with the lowest cumulative metric
+-  if a router has multiple paths to other routers, EIGRP breaks up packet and sends it through those multiple paths to shorten the delay - loading balance traffic across paths
+-  routers need to know which autonomous system they belong to
+-  only border routers can belong to multiple autonomous systems
+
+## border gateway protocol
+
+-  application layer protocol (layer 7)
+-  complex to implement - comes from how paths are computed and number of parameters you need to consider to compute the best/quickest path to the destination
+-  only protocol used on the internet (exterior routing protocol)
+-  hop = entire autonomous system
+-  BGP doesn't care how the traffic is routed within an autonomous system, there could be hundreds of routers in them
+-  **manually implemented and configured, can't be dynamically configured**
+-  admin needs to configure border gateway
+
+best path selection parameters:
+-  weight of the interface
+-  source of the path
+-  path length
+-  preferred path
+-  preferred autonomous system entry point
+
+**weakness**: BGP routers are very slow in building their routing tables (takes hours in case something happens)
+-  clients of internet service provides have no access to the internet for multiple hours
+
+focus: security and scalability (amount of autonomous systems connected) in design and implementation, **NOT** efficiency (speed)

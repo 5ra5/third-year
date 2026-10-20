@@ -41,10 +41,15 @@ student remains responsible for: choosing which room to go to, whether to approa
 
 # proposed system architecture
 
-1. If it needs external or domain-specific information, show how it will access and use that information (e.g., RAG).
+1. If it needs external or domain-specific information, show how it will access and use that information (e.g., RAG). 
 2.  If it needs to perform actions or access external systems, show how this will be done (e.g., tools, APIs, MCP).
-3.  If it needs to retain information during or across interactions, show how this will be handled (e.g., memory).
+3.  If it needs to retain information during or across interactions, show how this will be handled (e.g., memory). = cookies - local cache (user most commonly makes requests to specific course)
 4.  If you propose multiple agents, show what each agent is responsible for and how they interact (e.g., coordinator/supervisor and specialised agents).
 5.  If human involvement is required, show where the person is involved and what they do (e.g., user approval before an action is executed).
 
 A clear architecture diagram is provided and is consistent with what the agent should do. Relevant components (e.g., RAG, tools/APIs/MCP, memory, multiple agents, human involvement) and their interactions are clearly shown and explained.
+
+-  redbrick API = LLM gets query from the user - calling a tool that gets information from the API (function we can define that identifies - tool)
+-  information is provided by the user
+-  LLM takes the prompt and identifies which tools it can use
+-  RAG for professor mappings

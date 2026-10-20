@@ -1,0 +1,8 @@
+-  javascript
+-  individual or in pairs
+-  deadline = end of week 10
+-  local model in browser
+-  explore the universe of pretrained model that are small and easy to download and run
+-  local install that can be manipulated with javascript in the web browser
+-  use pretrained model that you can find
+-  form password: sem1

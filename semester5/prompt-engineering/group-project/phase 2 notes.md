@@ -27,23 +27,11 @@ student remains responsible for: choosing which room to go to, whether to approa
 -  system cannot determine exact real-time location and should not imply that a lecturer is definitely present in a particular room simply because they are scheduled to teach there
 -  constraints: DCU timetable data, website structure, possible rate limits and changes to the university's online systems
 
-**location dependency**
--  nearest-room recommendation depends on the user granting location access
--  location services disabled = permission denied
--  location reading inaccurate = system not able to reliably determine the nearest available room
--  **user manually selects their current building or campus area**
-
-## questions
-
-1.  should we do the feature where user manually selects their current building or campus area if location is unavailable? or should we just scrap the current location all together and just have manual interface input?
-2.  should users use building codes (eg. FTG for Polaris, SA for Stokes)
-3.  should we ask the user what they're looking for before trying to input any data (view timetable, find free room or find lecturer)
-
 # proposed system architecture
 
 1. If it needs external or domain-specific information, show how it will access and use that information (e.g., RAG). 
 2.  If it needs to perform actions or access external systems, show how this will be done (e.g., tools, APIs, MCP).
-3.  If it needs to retain information during or across interactions, show how this will be handled (e.g., memory). = cookies - local cache (user most commonly makes requests to specific course)
+3.  If it needs to retain information during or across interactions, show how this will be handled (e.g., memory). cache (user most commonly makes requests to specific course)
 4.  If you propose multiple agents, show what each agent is responsible for and how they interact (e.g., coordinator/supervisor and specialised agents).
 5.  If human involvement is required, show where the person is involved and what they do (e.g., user approval before an action is executed).
 
@@ -53,3 +41,42 @@ A clear architecture diagram is provided and is consistent with what the agent s
 -  information is provided by the user
 -  LLM takes the prompt and identifies which tools it can use
 -  RAG for professor mappings
+
+one:
+- Redbrick timetable data may be incomplete or outdated.
+    
+- A room without a timetable conflict is not guaranteed to be physically vacant or available for student use.
+    
+- Lecturer results indicate scheduled teaching, not confirmed physical presence.
+    
+- Human involvement Focus: Students select the correct lecturer when multiple names match. (LLM has to stop here before processing the rest of the workflow so this is a valid human involvement)
+    
+- Mention briefly the human involvement in features A and B
+    
+- LLM provides information and recommendations, but the student makes the final decision about what to do with them.
+
+
+two:
+- Explain the overall stack: Python, Streamlit, LLM through Ollama, Redbrick API, SQLite.
+    
+- Explain that we propose one LLM agent with multiple tools, rather than three independent agents.
+    
+- Describe how the API provides timetable information and SQLite stores supporting indexed data.
+    
+- Explain how the application maintains the selected inputs and lecturer choice during interactions.
+
+
+
+- Clearly distinguish responsibilities:
+    
+- Streamlit: Forms, timetable display, room results, lecturer-selection popup.
+    
+- LLM: Tool selection, search-expansion decisions, clarification, explanations.
+    
+- Python: Timetable calculations, room-conflict checking, filtering and ranking results.
+    
+- Redbrick API: Source of timetable events, rooms, and lecturer identifiers.
+    
+- SQLite: Teaching-room catalog, building relationships/proximity, lecturer-to-module index.
+    
+- Include a few concrete tool names, such as analyze_free_gaps(), find_rooms_nearby(), and find_next_lecture().

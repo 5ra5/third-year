@@ -1,4 +1,4 @@
--- CA320 Computability and Complexity
+--- CA320 Computability and Complexity
 --
 -- Petra Sartori
 

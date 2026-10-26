@@ -1,4 +1,16 @@
-in reports don't use sweeping words like **intuitive, easy to use and user-friendly**
+in reports don't use sweeping words like **intuitive, easy to use, clean and user-friendly**
+use sentences like:
+-  is the **mapping** properly done
+-  it's an issue of making the functionality more **visible**
+-  of the **usability criteria**, which is the priority? are we going for **efficiency** or **learnability**
+-  how can we reduce the **click distance** here
+-  who are **target users**
+-  try an informal **observation** session with a few test users to find some obvious usability bugs
+-  does the app provide any **accessibility** features
+-  not a great **metaphor**
+-  a simple matching algorithm could offer some powerful **short-cuts** here
+-  contents on this page is not **sharpened** enough
+-  well, a very poor **affordance** here
 
 make sure to use and mention these design principles:
 -  affordance
